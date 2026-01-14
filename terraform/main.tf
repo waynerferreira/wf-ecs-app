@@ -25,4 +25,9 @@ module "service" {
     data.aws_ssm_parameter.private_subnet_3.value,
   ]
 
+  #AutoScaling
+  saclae_type = var.scale_type
+
+  task_minimum = var.task.minimum
+  task_maximum = var.task.maximum
 }
